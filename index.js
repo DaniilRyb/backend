@@ -1,7 +1,8 @@
+import express from "express"
 import mongoose from "mongoose";
 import router from "./Router.js";
-import * as dotenv from 'dotenv'
-import express from 'express'
+import dotenv from 'dotenv'
+
 
 const PORT = 5000
 const app = express()
@@ -10,6 +11,8 @@ app.use(express.json())
 app.use('/api', router)
 dotenv.config()
 
+//app.use(express.static(path.resolve(__dirname, 'client'))))
+
 async function startApp() {
     try {
         await mongoose.connect(process.env.DB_URL, {useUnifiedTopology: true, useNewUrlParser: true})
@@ -17,6 +20,7 @@ async function startApp() {
     } catch (e) {
         console.log(e)
     }
+
 }
 
 startApp()

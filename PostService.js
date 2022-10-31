@@ -13,7 +13,7 @@ class PostService {
 
     async getOne(id) {
         if (!id) {
-            throw new Error('не указан ID')
+            throw new Error('Пожалуйств, укажите ID')
         }
         const post = await Post.findById(id)
         return post
