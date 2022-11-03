@@ -1,4 +1,4 @@
-# Backend using NodeJS, ExpressJS, Postman and MongoDB stack 
+## Backend with help NodeJS, ExpressJS, Postman and MongoDB stack 
 
 ## GET запрос
 ![](/requests/GET.jpg)
